@@ -1,0 +1,96 @@
+/*account.php and index.php and category.php*/
+
+.btn-primary {
+            background-color: #4a2040 !important;
+            border-color: #4a2040 !important;
+        }
+        .btn-primary:hover {
+            background-color: #632850 !important;
+            border-color: #632850 !important;
+        }
+        .mainBackground {
+            background-color: #F7D6E6;
+            min-height: 100vh;
+            padding: 30px 0;
+        }
+        .section-title {
+            color: #4a2040;
+            font-weight: bold;
+            border-bottom: 3px solid #4a2040;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        /*index.php*/
+    .card-mainPage {
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .card-mainPage:hover {
+            transform: translateY(-5px);
+        }
+
+
+
+
+/*category.php*/
+      
+        .recipe-card-main {
+            transition: transform 0.3s;
+        }
+        .recipe-card-main:hover {
+            transform: translateY(-5px);
+        }
+        .loading {
+            text-align: center;
+            padding: 50px;
+        }
+
+
+/*recipe adding part*/
+.add-recipe-btn {
+        background: linear-gradient(135deg, #4a2040 0%, #632850 100%);
+        border: none;
+        padding: 15px;
+        border-radius: 12px;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        width: 100%;
+        transition: all 0.3s;
+        box-shadow: 0 4px 10px rgba(74, 32, 64, 0.3);
+    }
+    .add-recipe-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(74, 32, 64, 0.5);
+    }
+    .sticky-top-custom {
+        position: sticky;
+        top: 20px;
+        z-index: 100;
+    }
+
+/*my recipes part - col6 ilk part*/
+
+.recipe-card {
+        transition: transform 0.3s, box-shadow 0.3s;
+        border: none;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+    .recipe-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+
+/*others recipes card*/
+
+ .recipe-author {
+        background-color: #f8f9fa;
+        padding: 8px 12px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        display: inline-block;
+    }
