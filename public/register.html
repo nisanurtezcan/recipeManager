@@ -92,7 +92,6 @@
   
   
 
- <!-- Satır 107, 134 değiştir -->
 <a href="login.html">Already have an account? Login.</a>
 
 <script>
@@ -104,7 +103,6 @@ document.getElementById('registerForm').addEventListener('submit', async functio
   const password = document.getElementById('regPass').value;
 
   try {
-    // ✅ DÜZELT: API path
     const response = await fetch('../api/auth/register.php', {
       method: 'POST',
       headers: {
@@ -130,3 +128,4 @@ document.getElementById('registerForm').addEventListener('submit', async functio
 </body>
 
 </html>
+
