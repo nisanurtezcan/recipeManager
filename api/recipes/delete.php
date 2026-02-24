@@ -19,7 +19,6 @@ if (!isset($data['recipe_id'])) {
 $recipe_id = (int)$data['recipe_id'];
 
 try {
-    // Sadece kendi tarifini silebilir
     $stmt = $conn->prepare("DELETE FROM user_recipes WHERE id = ? AND user_id = ?");
     $stmt->bind_param("ii", $recipe_id, $user_id);
     
@@ -34,4 +33,5 @@ try {
 }
 
 $conn->close();
+
 ?>
