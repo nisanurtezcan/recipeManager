@@ -3,10 +3,9 @@
 session_start();
 include("../config/config.php");
 
-// URL'den kategori al - örn: category.php?type=desserts
+// URL'den kategori almak için - örn: category.php?type=desserts
 $category = $_GET['type'] ?? 'all';
 
-// Kategori isimleri için güzel başlıklar
 $category_titles = [
     'desserts' => 'Desserts',
     'drinks' => 'Drinks',
@@ -120,7 +119,7 @@ $username = $_SESSION['username'] ?? '';
     
     <!-- TARİFLERİ YÜKLEYEN JAVASCRIPT -->
     <script>
-        // Sayfa yüklendiğinde çalışacak
+        // Sayfa yüklendiğinde çalışacağı için DOMContentLoaded
         document.addEventListener('DOMContentLoaded', function() {
             loadRecipes();
         });
@@ -197,3 +196,4 @@ $username = $_SESSION['username'] ?? '';
     </script>
 </body>
 </html>
+
