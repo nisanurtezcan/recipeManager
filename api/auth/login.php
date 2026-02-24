@@ -1,10 +1,10 @@
 <?php
-session_start(); // Yalnızca burada ve bir kez çağrılacak
+session_start();
 
 // config.php dosyasını dahil et
 include("../../config/config.php");
 
-header('Content-Type: application/json'); // Yanıtın JSON olduğunu belirtmek için
+header('Content-Type: application/json'); 
 
 // JSON verisini al
 $data = json_decode(file_get_contents('php://input'), true);
@@ -16,7 +16,7 @@ if (isset($data['logUser']) && isset($data['logPass'])) {
     if (!empty($logUser) && !empty($logPass)) {
         // Kullanıcı adı kontrolü
         $stmt = $conn->prepare("SELECT * FROM users WHERE username = ? LIMIT 1");
-        $stmt->bind_param("s", $logUser); // Parametreyi bağla
+        $stmt->bind_param("s", $logUser); 
         $stmt->execute();
         $result = $stmt->get_result();
 
@@ -27,8 +27,8 @@ if (isset($data['logUser']) && isset($data['logPass'])) {
             // Şifre doğrulaması
             if (password_verify($logPass, $passwordWithHash)) {
                 // Oturum değişkenlerini başlat
-                $_SESSION["id"] = $rowUser["id"];  // Kullanıcı ID
-                $_SESSION["username"] = $logUser;  // Oturum açan kullanıcının adı
+                $_SESSION["id"] = $rowUser["id"];  
+                $_SESSION["username"] = $logUser;  
 
                 // Başarılı giriş
                 echo json_encode(['success' => true, 'message' => 'Login successful']);
@@ -45,3 +45,4 @@ if (isset($data['logUser']) && isset($data['logPass'])) {
     echo json_encode(['success' => false, 'message' => 'Invalid Request']);
 }
 ?>
+
