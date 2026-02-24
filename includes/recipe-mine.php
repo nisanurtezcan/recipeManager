@@ -6,7 +6,7 @@
 </style>
 
 <!-- My Recipes Section -->
-
+<!-- - - - - -->
 
 <!-- Loading -->
 <div id="my-recipes-loading" class="text-center">
@@ -21,4 +21,5 @@
 <div id="my-recipes-empty" class="alert alert-info" style="display: none;">
     <i class="fa-solid fa-info-circle me-2"></i>
     You haven't added any recipes yet. Click "Add New Recipe" to get started!
+
 </div>
