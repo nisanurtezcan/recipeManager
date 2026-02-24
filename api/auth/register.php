@@ -1,7 +1,7 @@
 <?php
 include("../../config/config.php");
 
-header('Content-Type: application/json'); // JSON yanıtı göndereceğimizi belirtiyoruz
+header('Content-Type: application/json'); 
 
 // JSON verisini al
 $data = json_decode(file_get_contents("php://input"));
@@ -11,7 +11,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($data->regUser)) {
     $regEmail = trim($data->regEmail);
     $regPass = trim($data->regPass);
 
-    // Tüm alanların doldurulup doldurulmadığını kontrol et
     if (!empty($regUser) && !empty($regEmail) && !empty($regPass)) {
         try {
             // Kullanıcı adının mevcut olup olmadığını kontrol et
@@ -60,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($data->regUser)) {
                 ]);
             }
         } catch (Exception $e) {
-            // Hataları logla ve JSON yanıtı gönder
+            // Hata log - JSON yanıtı gönder
             echo json_encode([
                 "success" => false,
                 "message" => "Error: " . $e->getMessage()
@@ -82,3 +81,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($data->regUser)) {
 }
 exit();
 ?>
+
