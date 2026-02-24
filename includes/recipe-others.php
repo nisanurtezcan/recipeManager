@@ -5,7 +5,7 @@
 </style>
 
 <!-- Other Users' Recipes Section -->
-
+<!-- - - - - -->
 
 <!-- Loading -->
 <div id="other-recipes-loading" class="text-center">
@@ -20,4 +20,5 @@
 <div id="other-recipes-empty" class="alert alert-info" style="display: none;">
     <i class="fa-solid fa-info-circle me-2"></i>
     No community recipes yet. Be the first to share!
+
 </div>
